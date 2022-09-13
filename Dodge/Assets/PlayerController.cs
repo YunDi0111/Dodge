@@ -8,8 +8,8 @@ public class PlayerController : MonoBehaviour
     public float speed = 8f;    //이동속력
     
     void Start()
-    {
-        
+    {   //게임 오브젝트에서 Rigidbody 컴포넌트를 찾아 playerRigidbody에 할당
+        playerRididbody = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
             playerRididbody.AddForce(-speed, 0f, 0f);
         }
     }
-    public void die()
+    public void Die()
     {   //자신의 게임 오브젝트를 비활성화
         gameObject.SetActive(false);
     }
