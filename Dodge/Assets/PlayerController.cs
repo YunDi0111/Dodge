@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
         // 리지드바디의 속도에 newVelocity 할당
         playerRigidbody.velocity = newVelocity;
     }
-    public void die()
+    public void Die() //player가 실행안하고, 총알이 부딪혔을때 발동!(부딪히면 void Die()메서드 실행시켜~)
     {   //자신의 게임 오브젝트를 비활성화
         gameObject.SetActive(false);
     }
